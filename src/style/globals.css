@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/* default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden !important;
+}
+
+/* Slim Scrollbar */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(141, 138, 138, 0.3); /* Adjust color */
+  border-radius: 10px;
+}
+
+/* common classes */
+.bg-pure-black {
+  @apply bg-[#121414];
+}
+.bg-common-black {
+  @apply bg-[#171B1A];
+}
+.bg-primary {
+  @apply bg-[#F5BD4D];
+}
+.text-primary {
+  @apply text-[#F5BD4D];
+}
+.text-off-white {
+  @apply text-[#C6C6C6];
+}
+.text-pure-off-white {
+  @apply text-[#979797];
+}
+
+/* gradients */
+.gradient-text {
+  @apply bg-gradient-to-r from-[#f5bd4d] to-[#f89222] bg-clip-text text-transparent;
+}
+.gradient-bg {
+  @apply bg-gradient-to-r from-[#f5bd4d] to-[#f89222] text-white;
+}
+
+.gradient-bg-2 {
+  border-radius: 0px 50px 50px 0px;
+  background: linear-gradient(
+    90deg,
+    rgba(245, 189, 77, 0.3) 0.36%,
+    rgba(248, 146, 34, 0.3) 99.88%
+  );
+}
+
+/* responsive classes */
+.main-container {
+  @apply w-full mx-auto px-2;
+}
+@media (min-width: 576px) {
+  .main-container {
+    max-width: 540px !important;
+  }
+}
+@media (min-width: 768px) {
+  .main-container {
+    max-width: 720px !important;
+  }
+}
+@media (min-width: 992px) {
+  .main-container {
+    max-width: 970px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .main-container {
+    max-width: 1170px !important;
+  }
+}
+@media (min-width: 1400px) {
+  .main-container {
+    max-width: 1360px !important;
+  }
+}
